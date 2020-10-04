@@ -27,9 +27,15 @@ a {
     margin-top: 1rem;
 }
 
-.btn {
+.btn-start {
     height: 3rem;
     width: 10rem;
+    cursor: pointer;
+    background-color: blue;
+    border-radius: 1rem;
+}
+.btn-start:focus {
+    outline: none;
 }
 
 .game-details {
