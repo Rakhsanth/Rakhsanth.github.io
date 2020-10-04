@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+a {
+    text-decoration: none;
+}
+
+.container {
+    margin: 50vh auto;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50%);
+}
+
+.container > * {
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.btn {
+    height: 3rem;
+    width: 10rem;
+}
+
+.game-details {
+    display: flex;
+}
+.score-value {
+    margin-left: 0.5rem;
+}
+
+.game-over {
+    margin-left: 10rem;
+    color: red;
+}
+
+.game-container {
+    display: flex;
+}
+
+.main-grid {
+    background-color: yellow;
+    width: 200px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mini-grid {
+    margin-left: 5rem;
+    background-color: yellow;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+}
+.highlight {
+    background-color: blue;
+}
