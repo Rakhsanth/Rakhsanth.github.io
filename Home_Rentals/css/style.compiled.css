@@ -113,10 +113,7 @@ a {
           transform: translateY(-1rem); } }
   .header-detail {
     width: 60%;
-    margin: 7rem 0; }
-    @media (max-width: 75em) {
-      .header-detail {
-        margin: 5rem 0; } }
+    margin: 5rem 0; }
     .header-detail-sub-title {
       font-size: 2rem;
       color: #b28451;
@@ -308,7 +305,7 @@ a {
 
 .container {
   display: grid;
-  grid-template-rows: 85vh min-content 40vw repeat(3, min-content);
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end main-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [main-end]; }
   @media (max-width: 37.5em) {
     .container {
