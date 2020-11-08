@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito 300,300i"
+        />
+        <title>Home Rentals - Luxurious rental houses for travellers</title>
+        <link rel="shortcut icon" type="image/jpg" href="img/logoFavicon.jpg" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body class="container">
+        <div class="sidebar">
+            <nav id="sidebar-nav" class="sidebar-nav">
+                <a
+                    href="#"
+                    class="sidebar-nav-btn"
+                    onclick="handleMenu(event, 'open')"
+                >
+                    <span class="sidebar-nav-btn-link"></span>
+                </a>
+                <a
+                    href="#"
+                    class="sidebar-nav-close"
+                    onclick="handleMenu(event, 'close')"
+                    >X</a
+                >
+                <div id="sidebar-nav-options" class="sidebar-nav-options">
+                    <div
+                        class="sidebar-nav-options-option"
+                        onmouseover="handleHover(event)"
+                        onmouseout="handleHoverOut(event)"
+                    >
+                        <a
+                            href="#features"
+                            class="heading-3-dark sidebar-nav-options-text"
+                            onmouseover="handleHover(event, true)"
+                            onmouseout="handleHoverOut(event, true)"
+                            onclick="handleMenuOption(event)"
+                        >
+                            Features
+                        </a>
+                    </div>
+                    <div
+                        class="sidebar-nav-options-option"
+                        onmouseover="handleHover(event)"
+                        onmouseout="handleHoverOut(event)"
+                    >
+                        <a
+                            href="#stories"
+                            class="heading-3-dark sidebar-nav-options-text"
+                            onmouseover="handleHover(event, true)"
+                            onmouseout="handleHoverOut(event, true)"
+                            onclick="handleMenuOption(event)"
+                        >
+                            Stories
+                        </a>
+                    </div>
+                    <div
+                        class="sidebar-nav-options-option"
+                        onmouseover="handleHover(event)"
+                        onmouseout="handleHoverOut(event)"
+                    >
+                        <a
+                            href="#rentals"
+                            class="heading-3-dark sidebar-nav-options-text"
+                            onmouseover="handleHover(event, true)"
+                            onmouseout="handleHoverOut(event, true)"
+                            onclick="handleMenuOption(event)"
+                        >
+                            Rentals
+                        </a>
+                    </div>
+                    <div
+                        class="sidebar-nav-options-option"
+                        onmouseover="handleHover(event)"
+                        onmouseout="handleHoverOut(event)"
+                    >
+                        <a
+                            href="#gallery"
+                            class="heading-3-dark sidebar-nav-options-text"
+                            onmouseover="handleHover(event, true)"
+                            onmouseout="handleHoverOut(event, true)"
+                            onclick="handleMenuOption(event)"
+                        >
+                            Gallery
+                        </a>
+                    </div>
+                    <div
+                        class="sidebar-nav-options-option"
+                        onmouseover="handleHover(event)"
+                        onmouseout="handleHoverOut(event)"
+                    >
+                        <a
+                            href="#footer"
+                            class="heading-3-dark sidebar-nav-options-text"
+                            onmouseover="handleHover(event, true)"
+                            onmouseout="handleHoverOut(event, true)"
+                            onclick="handleMenuOption(event)"
+                        >
+                            Others
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <header id="header" class="header">
+            <div class="header-logo-area">
+                <img
+                    src="/img/logoFavicon.jpg"
+                    alt="logo"
+                    class="header-logo-area-img"
+                />
+                <h1 class="header-logo-area-text">Home Rentals</h1>
+            </div>
+            <div class="header-detail">
+                <h5 class="header-detail-sub-title">
+                    Feel like your own home !!!
+                </h5>
+                <h2 class="header-detail-title">
+                    The ultimate personal freedom
+                </h2>
+                <button class="btn header-btn">View our properties</button>
+            </div>
+            <div class="header-footer">
+                <h5 class="header-footer-top">As seen on</h5>
+                <div class="header-footer-logos">
+                    <img
+                        src="/img/bbc-logo-black-and-white.png"
+                        alt="bbc logo"
+                        class="header-footer-logos-img"
+                    />
+                    <img
+                        src="/img/forbesLogo.png"
+                        alt="forbes logo"
+                        class="header-footer-logos-img"
+                    />
+                    <img
+                        src="/img/techCrunch.png"
+                        alt="tech crunch logo"
+                        class="header-footer-logos-img"
+                    />
+                    <img
+                        src="/img/businessInsideLogo.png"
+                        alt="business insider logo"
+                        class="header-footer-logos-img"
+                    />
+                </div>
+            </div>
+        </header>
+        <div class="realtors">
+            <h3 class="realtors-text">Top 3 Realtors</h3>
+            <div class="realtors-block">
+                <img
+                    src="img/person1.jpg"
+                    alt="profile-pic"
+                    class="realtors-block-pic"
+                />
+                <h3 class="realtors-block-text">Thomas Erick</h3>
+                <img
+                    src="img/person2.jpg"
+                    alt="profile-pic"
+                    class="realtors-block-pic"
+                />
+                <h3 class="realtors-block-text">Leena Mathews</h3>
+                <img
+                    src="img/person3.jpg"
+                    alt="profile-pic"
+                    class="realtors-block-pic"
+                />
+                <h3 class="realtors-block-text">Vivek Anand</h3>
+            </div>
+        </div>
+        <div id="features" class="features">
+            <div class="feature">
+                <svg class="feature-icon">
+                    <use xlink:href="img/sprite.svg#icon-earth"></use>
+                </svg>
+                <h3 class="heading-4 heading-4-dark">
+                    Can find us anywhere across the globe
+                </h3>
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae, non nesciunt ipsum tempore laudantium asperiores.
+                </p>
+            </div>
+            <div class="feature">
+                <svg class="feature-icon">
+                    <use xlink:href="img/sprite.svg#icon-location"></use>
+                </svg>
+                <h3 class="heading-4 heading-4-dark">
+                    Can find us anywhere across the globe
+                </h3>
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae, non nesciunt ipsum tempore laudantium asperiores.
+                </p>
+            </div>
+            <div class="feature">
+                <svg class="feature-icon">
+                    <use xlink:href="img/sprite.svg#icon-profile"></use>
+                </svg>
+                <h3 class="heading-4 heading-4-dark">
+                    Can find us anywhere across the globe
+                </h3>
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae, non nesciunt ipsum tempore laudantium asperiores.
+                </p>
+            </div>
+            <div class="feature">
+                <svg class="feature-icon">
+                    <use xlink:href="img/sprite.svg#icon-user-tie"></use>
+                </svg>
+                <h3 class="heading-4 heading-4-dark">
+                    Can find us anywhere across the globe
+                </h3>
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae, non nesciunt ipsum tempore laudantium asperiores.
+                </p>
+            </div>
+            <div class="feature">
+                <svg class="feature-icon">
+                    <use xlink:href="img/sprite.svg#icon-shopping-cart"></use>
+                </svg>
+                <h3 class="heading-4 heading-4-dark">
+                    Can find us anywhere across the globe
+                </h3>
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae, non nesciunt ipsum tempore laudantium asperiores.
+                </p>
+            </div>
+            <div class="feature">
+                <svg class="feature-icon">
+                    <use xlink:href="img/sprite.svg#icon-key2"></use>
+                </svg>
+                <h3 class="heading-4 heading-4-dark">
+                    Can find us anywhere across the globe
+                </h3>
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae, non nesciunt ipsum tempore laudantium asperiores.
+                </p>
+            </div>
+        </div>
+        <div id="stories" class="story-pictures">
+            <img
+                src="img/story_image1.jpg"
+                alt="rental image"
+                class="story-pictures-image-1"
+            />
+            <img
+                src="img/story_image2.jpg"
+                alt="rental image"
+                class="story-pictures-image-2"
+            />
+        </div>
+        <div class="story-content">
+            <h3 class="heading-3 heading-3-dark mb-md">What most people say</h3>
+            <h2 class="heading-2 heading-2-dark mb-md">
+                &ldquo; Lorem ipsum dolor sit amet consectetur adipisicing elit
+                &rdquo;
+            </h2>
+            <p class="story-content-paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                eum accusantium amet iste, quo, quas eius cumque, delectus vero
+                ab odit praesentium omnis animi tempore dolore. Qui unde
+                eligendi exercitationem.
+            </p>
+            <button class="btn">Book your rental</button>
+        </div>
+        <section id="rentals" class="homes">
+            <div class="homeCard">
+                <img
+                    src="img/story_image1.jpg"
+                    alt="rental luxury"
+                    class="homeCard-image"
+                />
+                <svg class="homeCard-like-icon">
+                    <use xlink:href="img/spriteCard.svg#icon-heart"></use>
+                </svg>
+                <h5 class="homeCard-name">Suitable for small group</h5>
+                <div class="homeCard-location">
+                    <svg class="homeCard-icon">
+                        <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <p class="homeCard-text">Delhi</p>
+                </div>
+                <div class="homeCard-size">
+                    <svg class="homeCard-icon">
+                        <use xlink:href="img/spriteCard.svg#icon-users"></use>
+                    </svg>
+                    <p class="homeCard-text">5 rooms</p>
+                </div>
+                <div class="homeCard-area">
+                    <svg class="homeCard-icon">
+                        <use xlink:href="img/spriteCard.svg#icon-office"></use>
+                    </svg>
+                    <p class="homeCard-text">500 m<sup>2</sup></p>
+                </div>
+                <div class="homeCard-price">
+                    <svg class="homeCard-icon">
+                        <use
+                            xlink:href="img/spriteCard.svg#icon-credit-card"
+                        ></use>
+                    </svg>
+                    <p class="homeCard-text">&#8377; 5000</p>
+                </div>
+                <button class="btn homeCard-btn">Contact house keeper</button>
+            </div>
+            <div class="homeCard">
+                <img
+                    src="img/story_image1.jpg"
+                    alt="rental luxury"
+                    class="homeCard-image"
+                />
+                <svg class="homeCard-like-icon">
+                    <use xlink:href="img/spriteCard.svg#icon-heart"></use>
+                </svg>
+                <h5 class="homeCard-name">Suitable for large group</h5>
+                <div class="homeCard-location">
+                    <svg class="homeCard-icon">
+                        <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <p class="homeCard-text">Delhi</p>
+                </div>
+                <div class="homeCard-size">
+                    <svg class="homeCard-icon">
+                        <use xlink:href="img/spriteCard.svg#icon-users"></use>
+                    </svg>
+                    <p class="homeCard-text">5 rooms</p>
+                </div>
+                <div class="homeCard-area">
+                    <svg class="homeCard-icon">
+                        <use xlink:href="img/spriteCard.svg#icon-office"></use>
+                    </svg>
+                    <p class="homeCard-text">500 m<sup>2</sup></p>
+                </div>
+                <div class="homeCard-price">
+                    <svg class="homeCard-icon">
+                        <use
+                            xlink:href="img/spriteCard.svg#icon-credit-card"
+                        ></use>
+                    </svg>
+                    <p class="homeCard-text">&#8377; 5000</p>
+                </div>
+                <button class="btn homeCard-btn">Contact house keeper</button>
+            </div>
+            <div class="homeCard">
+                <img
+                    src="img/story_image1.jpg"
+                    alt="rental luxury"
+                    class="homeCard-image"
+                />
+                <svg class="homeCard-like-icon">
+                    <use xlink:href="img/spriteCard.svg#icon-heart"></use>
+                </svg>
+                <h5 class="homeCard-name">Suitable for medium group</h5>
+                <div class="homeCard-location">
+                    <svg class="homeCard-icon">
+                        <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <p class="homeCard-text">Delhi</p>
+                </div>
+                <div class="homeCard-size">
+                    <svg class="homeCard-icon">
+                        <use xlink:href="img/spriteCard.svg#icon-users"></use>
+                    </svg>
+                    <p class="homeCard-text">5 rooms</p>
+                </div>
+                <div class="homeCard-area">
+                    <svg class="homeCard-icon">
+                        <use xlink:href="img/spriteCard.svg#icon-office"></use>
+                    </svg>
+                    <p class="homeCard-text">500 m<sup>2</sup></p>
+                </div>
+                <div class="homeCard-price">
+                    <svg class="homeCard-icon">
+                        <use
+                            xlink:href="img/spriteCard.svg#icon-credit-card"
+                        ></use>
+                    </svg>
+                    <p class="homeCard-text">&#8377; 5000</p>
+                </div>
+                <button class="btn homeCard-btn">Contact house keeper</button>
+            </div>
+            <div class="homeCard">
+                <img
+                    src="img/story_image1.jpg"
+                    alt="rental luxury"
+                    class="homeCard-image"
+                />
+                <svg class="homeCard-like-icon">
+                    <use xlink:href="img/spriteCard.svg#icon-heart"></use>
+                </svg>
+                <h5 class="homeCard-name">Suitable for families</h5>
+                <div class="homeCard-location">
+                    <svg class="homeCard-icon">
+                        <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <p class="homeCard-text">Delhi</p>
+                </div>
+                <div class="homeCard-size">
+                    <svg class="homeCard-icon">
+                        <use xlink:href="img/spriteCard.svg#icon-users"></use>
+                    </svg>
+                    <p class="homeCard-text">5 rooms</p>
+                </div>
+                <div class="homeCard-area">
+                    <svg class="homeCard-icon">
+                        <use xlink:href="img/spriteCard.svg#icon-office"></use>
+                    </svg>
+                    <p class="homeCard-text">500 m<sup>2</sup></p>
+                </div>
+                <div class="homeCard-price">
+                    <svg class="homeCard-icon">
+                        <use
+                            xlink:href="img/spriteCard.svg#icon-credit-card"
+                        ></use>
+                    </svg>
+                    <p class="homeCard-text">&#8377; 5000</p>
+                </div>
+                <button class="btn homeCard-btn">Contact house keeper</button>
+            </div>
+            <div class="homeCard">
+                <img
+                    src="img/story_image1.jpg"
+                    alt="rental luxury"
+                    class="homeCard-image"
+                />
+                <svg class="homeCard-like-icon">
+                    <use xlink:href="img/spriteCard.svg#icon-heart"></use>
+                </svg>
+                <h5 class="homeCard-name">Suitable for treckers</h5>
+                <div class="homeCard-location">
+                    <svg class="homeCard-icon">
+                        <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <p class="homeCard-text">Delhi</p>
+                </div>
+                <div class="homeCard-size">
+                    <svg class="homeCard-icon">
+                        <use xlink:href="img/spriteCard.svg#icon-users"></use>
+                    </svg>
+                    <p class="homeCard-text">5 rooms</p>
+                </div>
+                <div class="homeCard-area">
+                    <svg class="homeCard-icon">
+                        <use xlink:href="img/spriteCard.svg#icon-office"></use>
+                    </svg>
+                    <p class="homeCard-text">500 m<sup>2</sup></p>
+                </div>
+                <div class="homeCard-price">
+                    <svg class="homeCard-icon">
+                        <use
+                            xlink:href="img/spriteCard.svg#icon-credit-card"
+                        ></use>
+                    </svg>
+                    <p class="homeCard-text">&#8377; 5000</p>
+                </div>
+                <button class="btn homeCard-btn">Contact house keeper</button>
+            </div>
+            <div class="homeCard">
+                <img
+                    src="img/story_image1.jpg"
+                    alt="rental luxury"
+                    class="homeCard-image"
+                />
+                <svg class="homeCard-like-icon">
+                    <use xlink:href="img/spriteCard.svg#icon-heart"></use>
+                </svg>
+                <h5 class="homeCard-name">Suitable for couples</h5>
+                <div class="homeCard-location">
+                    <svg class="homeCard-icon">
+                        <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <p class="homeCard-text">Delhi</p>
+                </div>
+                <div class="homeCard-size">
+                    <svg class="homeCard-icon">
+                        <use xlink:href="img/spriteCard.svg#icon-users"></use>
+                    </svg>
+                    <p class="homeCard-text">5 rooms</p>
+                </div>
+                <div class="homeCard-area">
+                    <svg class="homeCard-icon">
+                        <use xlink:href="img/spriteCard.svg#icon-office"></use>
+                    </svg>
+                    <p class="homeCard-text">500 m<sup>2</sup></p>
+                </div>
+                <div class="homeCard-price">
+                    <svg class="homeCard-icon">
+                        <use
+                            xlink:href="img/spriteCard.svg#icon-credit-card"
+                        ></use>
+                    </svg>
+                    <p class="homeCard-text">&#8377; 5000</p>
+                </div>
+                <button class="btn homeCard-btn">Contact house keeper</button>
+            </div>
+        </section>
+        <section id="gallery" class="gallery">
+            <div class="gallery-grid">
+                <figure class="image-container image-big">
+                    <img
+                        src="img/gallery_image-1.jpg"
+                        alt="top rental houses"
+                    />
+                </figure>
+                <figure class="image-container">
+                    <img
+                        src="img/gallery_image-2.jpg"
+                        alt="top rental houses"
+                    />
+                </figure>
+                <figure class="image-container">
+                    <img
+                        src="img/gallery_image-3.jpg"
+                        alt="top rental houses"
+                    />
+                </figure>
+                <figure class="image-container image-big">
+                    <img
+                        src="img/gallery_image-4.jpg"
+                        alt="top rental houses"
+                    />
+                </figure>
+                <figure class="image-container">
+                    <img
+                        src="img/gallery_image-5.jpg"
+                        alt="top rental houses"
+                    />
+                </figure>
+                <figure class="image-container image-big">
+                    <img
+                        src="img/gallery_image-6.jpg"
+                        alt="top rental houses"
+                    />
+                </figure>
+                <figure class="image-container">
+                    <img
+                        src="img/gallery_image-7.jpg"
+                        alt="top rental houses"
+                    />
+                </figure>
+                <figure class="image-container">
+                    <img
+                        src="img/gallery_image-8.jpg"
+                        alt="top rental houses"
+                    />
+                </figure>
+                <figure class="image-container image-big">
+                    <img
+                        src="img/gallery_image-9.jpg"
+                        alt="top rental houses"
+                    />
+                </figure>
+                <figure class="image-container">
+                    <img
+                        src="img/gallery_image-10.jpg"
+                        alt="top rental houses"
+                    />
+                </figure>
+                <figure class="image-container image-big">
+                    <img
+                        src="img/gallery_image-11.jpg"
+                        alt="top rental houses"
+                    />
+                </figure>
+                <figure class="image-container">
+                    <img
+                        src="img/gallery_image-12.jpg"
+                        alt="top rental houses"
+                    />
+                </figure>
+                <figure class="image-container">
+                    <img
+                        src="img/gallery_image-13.jpg"
+                        alt="top rental houses"
+                    />
+                </figure>
+                <figure class="image-container image-big">
+                    <img src="img/gallery_image-14.jpg" alt="top rental
+                    houses"">
+                </figure>
+                <figure class="image-container">
+                    <img
+                        src="img/gallery_image-15.jpg"
+                        alt="top rental houses"
+                    />
+                </figure>
+            </div>
+        </section>
+        <footer id="footer" class="footer">
+            <ul class="footer-list">
+                <li class="footer-list-item">
+                    <a href="#" class="footer-list-item-link"
+                        >Get personal guidance</a
+                    >
+                </li>
+                <li class="footer-list-item">
+                    <a href="#" class="footer-list-item-link"
+                        >Download our choice list</a
+                    >
+                </li>
+                <li class="footer-list-item">
+                    <a href="#" class="footer-list-item-link">Contact us</a>
+                </li>
+                <li class="footer-list-item">
+                    <a href="#" class="footer-list-item-link"
+                        >Recommend and win discounts</a
+                    >
+                </li>
+                <li class="footer-list-item">
+                    <a href="#" class="footer-list-item-link">Download app</a>
+                </li>
+            </ul>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

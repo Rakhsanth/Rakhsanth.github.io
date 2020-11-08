@@ -1,0 +1,10 @@
+.mb-md {
+    margin-bottom: 1rem;
+}
+
+.style-before {
+    &::before {
+        transition: all 0.3s ease;
+        left: -50% !important;
+    }
+}

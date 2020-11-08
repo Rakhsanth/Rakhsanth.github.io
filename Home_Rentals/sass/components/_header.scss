@@ -1,0 +1,192 @@
+.header {
+    background-image: linear-gradient(
+            to right,
+            rgba($color-secondary, 0.8),
+            rgba($color-secondary, 0.8)
+        ),
+        url('/img/gallery_image-4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-logo-area {
+        margin: 0 auto;
+        margin-top: 10%;
+        width: 35%;
+
+        &-img {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            @include respond(tab-land) {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+        &-text {
+            color: $color-primary-dark;
+            font-size: 2.5rem;
+            margin-left: 1rem;
+            transform: translateY(-1.5rem);
+            display: inline-block;
+
+            @include respond(tab-land) {
+                font-size: 1.5rem;
+                transform: translateY(-1rem);
+            }
+        }
+    }
+
+    &-detail {
+        width: 60%;
+        margin: 10rem 0;
+        @include respond(tab-land) {
+            margin: 5rem 0;
+        }
+
+        &-sub-title {
+            font-size: 2rem;
+            color: $color-primary-dark;
+            font-weight: 700;
+            @include respond(tab-land) {
+                font-size: 1.5rem;
+            }
+        }
+        &-title {
+            font-size: 3rem;
+            color: rgba(white, 0.8);
+            font-weight: 700;
+            @include respond(tab-land) {
+                font-size: 2rem;
+            }
+        }
+        .header-btn {
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            backface-visibility: hidden;
+            @include respond(tab-land) {
+                margin-top: 1.5rem;
+            }
+
+            &:active {
+                transform: translateY(0.5rem);
+            }
+        }
+    }
+
+    &-footer {
+        width: 60%;
+        margin-top: auto;
+        margin-bottom: 5rem;
+
+        &-top {
+            grid-row: 1 / 2;
+            grid-column: 1 / -1;
+            // width: 100%;
+            font-size: 2rem;
+            color: rgba(white, 0.5);
+            letter-spacing: 0.5rem;
+            display: grid;
+            grid-template-columns: 1fr max-content 1fr;
+            align-items: center;
+            column-gap: 1rem;
+
+            @include respond(tab-land) {
+                font-size: 1.3rem;
+                font-weight: bolder;
+            }
+
+            &::before {
+                content: '';
+                // position: absolute;
+                height: 0.25rem;
+                display: block;
+                background-color: currentColor;
+            }
+            &::after {
+                content: '';
+                // position: absolute;
+                height: 0.25rem;
+                display: block;
+                background-color: currentColor;
+            }
+        }
+        &-logos {
+            grid-row: 2 / -1;
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 1.5rem;
+            @include respond(tab-land) {
+                column-gap: 1rem;
+            }
+
+            &-img {
+                height: 4rem;
+                @include respond(tab-land) {
+                    height: 2.25rem;
+                }
+                @include respond(mobile) {
+                    height: 2rem;
+                }
+            }
+        }
+    }
+}
+
+.realtors {
+    background-image: linear-gradient(
+        to right,
+        $color-secondary,
+        $color-secondary
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include respond(mobile) {
+        padding: 2rem 0;
+    }
+
+    &-text {
+        margin-bottom: 3rem;
+        font-size: 2.5rem;
+        font-weight: 500;
+        @include respond(tab-land) {
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+    }
+    &-block {
+        display: grid;
+        grid-template-rows: repeat(3, minmax(7rem, min-content));
+        grid-template-columns: 10rem 1fr;
+        row-gap: 2rem;
+        @include respond(tab-land) {
+            grid-template-rows: repeat(3, minmax(5rem, min-content));
+        }
+
+        &-pic {
+            height: 7rem;
+            width: 7rem;
+            border-radius: 50%;
+            justify-self: center;
+            align-self: center;
+            @include respond(tab-land) {
+                height: 5rem;
+                width: 5rem;
+            }
+        }
+        &-text {
+            font-size: 2rem;
+            font-weight: 700;
+            color: rgba(white, 0.8);
+            align-self: center;
+            @include respond(tab-land) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

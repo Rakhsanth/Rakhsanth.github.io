@@ -1,0 +1,41 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @include respond(big-desktop) {
+        font-size: 75%;
+    }
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+    @include respond(mobile) {
+        font-size: 37.5%;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: $font-primary;
+    font-weight: 300;
+    color: $color-grey-dark-2;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    &:active,
+    &:visited {
+        text-decoration: none;
+    }
+}
