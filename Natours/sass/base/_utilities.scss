@@ -1,0 +1,24 @@
+.text-center-util{
+    text-align: center;
+}
+
+.heading-margin-util-big{
+    margin-bottom: 8rem;
+}
+.heading-margin-util-medium{
+    margin-bottom: 4rem;
+}
+.heading-margin-util-small{
+    margin-bottom: 1.5rem;
+    @include respond(mobile){
+        margin-bottom: 3rem;
+    }
+}
+
+.text-bold{
+    font-weight: 700;
+
+    &-white{
+        color: $color-white;
+    }
+}

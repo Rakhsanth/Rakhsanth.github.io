@@ -1,0 +1,23 @@
+// constant colors and stuffs
+
+$primary-color: rgb(126, 213, 111);
+$primary-color-light: rgb(40, 180, 131);
+$color-dark-grey: #777;
+$color-light-grey: #eee;
+$color-white: #fff;
+$color-light-grey-about: #f7f7f7;
+$shadow-color: black;
+$secondary-color-light: #ffb900;
+$secondary-color-dark: #ff7730;
+$tertiary-color-light: #2998ff;
+$tertiary-color-dark: #5643fa;
+
+// grid related stuff
+$grid-width: 114rem; // this is because as a standard 1140 px is used for rows
+$gutter-vertical: 8rem; // for 80 px
+$gutter-vertical-small: 4rem;
+$gutter-horizontal: 6rem;
+$gutter-horizontal-small: 3rem;
+
+// font sizes
+$default-font-size: 1.6rem;

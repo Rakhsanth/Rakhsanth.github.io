@@ -1,0 +1,106 @@
+.popup-modal{
+    opacity: 0;
+    visibility: hidden;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($shadow-color, .8);
+    z-index: 500;
+    transition: all .3s ease-in-out;
+
+    &-content{
+        display: table;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(.25);
+        width: 75%;
+        border-radius: 3px;
+        overflow: hidden;
+        background-color: $color-white;
+        transition: all .3s ease .2s;
+        @include respond(tab-port){
+            height: 70%;
+        }
+
+        &-left{
+            display: table-cell;    // used instead of floart to align like a fake table kind of
+            width: 30%;
+            @include respond(tab-port){
+                display: table-row;
+            }
+
+            &-img{
+                display: block;
+                width: 100%;
+                @include respond(tab-port){
+
+                    // margin: 0 auto;
+                    width: 50%;
+                    display: table-cell;
+                    float: left;
+                    height: 27rem;
+                    &:last-child{
+                        margin-bottom: .5rem;
+                        padding-left: .5rem;
+                    }
+                }  
+
+                &:not(:last-child){
+                    margin-bottom: 2px;
+                }
+            }
+        }
+        &-right{
+            display: table-cell;    // used instead of floart to align like a fake table kind of
+            vertical-align: middle;
+            width: 70%;
+            padding: 3rem;
+            @include respond(tab-port){
+                display: table-row;
+                text-align: center;
+            }
+
+            &-text{
+                font-size: $default-font-size;
+                column-count: 2;
+                column-gap: 3rem;
+                column-rule: 1px solid $shadow-color;
+                margin-bottom: 3rem;
+                hyphens: auto;
+            }
+
+            .btn-small{
+                padding: .7rem 1.5rem;
+            }
+        }
+
+        &-close{
+            &:link, &:visited{
+                display: inline-block;
+                font-size: 3rem;
+                font-weight: 700;
+                position: absolute;
+                top: 2.5rem;
+                right: 2.5rem;
+                line-height: 3px;
+                color: $shadow-color;
+                text-decoration: none;
+            }
+
+            &:hover, &:active{
+                color: $primary-color;
+            }
+        }
+    }
+
+    &:target{
+        opacity: 1;
+        visibility: visible;
+    }
+    &:target &-content{
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

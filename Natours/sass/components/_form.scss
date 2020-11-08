@@ -1,0 +1,127 @@
+.form{
+    padding: 5rem;
+    font-size: inherit;
+    width: 50%;
+    @include respond(tab-land){
+        width: 75%;
+    }
+    @include respond(tab-port){
+        width: 80%;
+    }
+    @include respond(mobile){
+        width: 100%;
+    }
+    
+    &-group{
+        padding: 2rem;
+        position: relative;
+
+        @include respond(mobile){
+            padding-bottom: 3rem;
+        }
+
+        .label{
+            padding: 2rem;
+            
+            &-text{
+                position: absolute;
+                top: 2rem;
+                left: 2rem;
+                opacity: 0;
+                transition: all .3s ease;
+                @include respond(tab-land){
+                    top: 2rem;
+                }
+            }
+        }
+        .text-input{
+            display: block;
+            font-size: inherit;
+            font-family: inherit;
+            padding: 1rem 2rem;
+            width: 90%;
+            border: none;
+            border-radius: 3px;
+            border-bottom: 3px solid transparent;
+            
+            &:focus{
+                outline: none;
+                border-bottom: 3px solid $primary-color;
+                box-shadow: 0 1rem 2rem rgba($shadow-color, .2);
+                
+                &:invalid{
+                    border-bottom: 3px solid orangered;
+                }
+            }
+
+            &::-webkit-input-placeholder{
+                color: $color-dark-grey;
+            }
+            &:placeholder-shown ~ .label-text{
+                position: absolute;
+                top: -2.5rem;
+                left: 2rem;
+                opacity: 1;
+                @include respond(tab-land){
+                    top: -3rem;
+                }
+                @include respond(mobile){
+                    top: -4rem;
+                }
+            }
+        }
+    }
+    .radio-group{
+        display: inline-block;
+        @include respond(tab-port){
+            width: 100%;
+        }
+
+        .radio-input{
+            display: none;
+        }
+
+        .label-radio{
+            padding-left: 4rem;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .radio-input:checked + .label-radio .radio-button::after{
+            opacity: 1;
+        }
+
+        .radio-button{
+            position: absolute;
+            display: inline-block;
+            height: 2.7rem;
+            width: 2.7rem;
+            border: 5px solid $primary-color;
+            border-radius: 50%;
+            top: 1.58rem;
+            left: 0;
+            transition: all .3s ease;
+            @include respond(tab-port){
+                top: 2rem;
+            }
+            @include respond(mobile){
+                top: 2.2rem;
+            }
+
+            
+            &::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 1.3rem;
+                width: 1.3rem;
+                background-color: $primary-color;
+                border-radius: 50%;
+                opacity: 0;
+            }
+        
+        }
+    }
+}

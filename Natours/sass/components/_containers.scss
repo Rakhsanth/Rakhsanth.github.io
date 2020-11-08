@@ -1,0 +1,97 @@
+.feature-container{
+    background-color: rgba($color-white, .8);
+    font-size: 1.5rem;
+    padding: 3rem .5rem;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($shadow-color, .2);
+    transition: transform .2s;      // here transform is used instead of all as we have only one thing to animate
+                                    // the one in line: 17
+    .feature-icon{
+        font-size: 5rem;
+        display: inline-block;
+        background-image: linear-gradient(to right, rgba($primary-color-light, 0.801), rgba($primary-color-light, 0.801));
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    &:hover{
+        transform: translateY(-1.5rem) scale(1.03);
+    }
+}
+
+.post-container{
+    margin: 0 auto;
+    width: 80%;
+    padding: 5rem;
+    font-size: $default-font-size;
+    background-color: rgba($color-white, .7);
+    transform: skewX(-12deg);
+
+    @include respond(tab-port){
+        width: 100%;
+        padding: 2rem;
+        transform: skewX(-7deg);
+    }
+    @include respond(mobile){
+        width: 100%;
+        padding: 2rem;
+        transform: skewX(-4deg);
+    }
+
+    & > * {                         // all children selector
+        transform: skewX(12deg);
+        @include respond(tab-port){
+            transform: skewX(7deg);
+        }
+        @include respond(mobile){
+            transform: skewX(4deg);
+        }
+    }
+
+    .post-picture{
+        height: 12rem;
+        width: 12rem;
+        float: left;
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);  // to create the shape of this container
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);      // to clip the shape to get the floating effect.
+        transform: translate(-1rem) skewX(12deg);   // When already some transfor exists, the parent transform
+                                                // in this case skew will not work so need to skew here also.
+        @include respond(tab-port){
+            transform: translate(-1rem) skewX(7deg);
+        }
+        @include respond(mobile){
+            transform: translate(-1rem) skewX(4deg);
+        }
+    }
+    .post-picture-cropped{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        transition: all .5s ease;
+        backface-visibility: hidden;
+    }
+    .post-text{
+        padding: .4rem 0;
+    }
+    .image-text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: $default-font-size;
+        transform: translate(-50%, 25%);
+        color: $color-white;
+        opacity: 0;
+        transition: all .5s ease;
+        backface-visibility: hidden;
+    }
+    
+    &:hover .image-text{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+    &:hover .post-picture-cropped{
+        filter: brightness(80%); // brightness is dark below 100%. 
+                                // blur(3px) blur as px increases, the pic is more blurred
+    }
+}

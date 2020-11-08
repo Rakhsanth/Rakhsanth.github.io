@@ -1,0 +1,59 @@
+.composition{
+    height: 15rem;
+    position: relative;
+
+    &_photo{
+        width: 50%;
+        // height: 25%;
+        box-shadow: 0 1.5rem 4rem rgba($shadow-color, .4);
+        border: 2px;
+        outline-offset: 2rem;   // assume outline like border only but for border we cant give offset
+        z-index: 7;             // gave offset here but border hs no color so it is given when hovering
+        transition: all .2s;
+        @include respond(tab-port){
+            float: left;
+        }
+    
+        &-1{
+            position: absolute;
+            top: -2.5rem;
+            left: 1rem;
+            @include respond(tab-port){
+                width: 33.3333%;
+                top: 0rem;
+                left: 0rem;
+            }
+        }
+        &-2{
+            position: absolute;
+            top: 4rem;
+            right: 1rem;
+            @include respond(tab-port){
+                width: 33.3333%;
+                top: 0rem;
+                left: 33.3333%;
+                z-index: 50;
+                transform: scale(1.32);
+            }
+        }
+        &-3{
+            position: absolute;
+            left: 10%;
+            top: 10rem;
+            @include respond(tab-port){
+                width: 33.3333%;
+                top: 0rem;
+                left: 66.6667%;
+            }
+        }
+
+        &:hover{
+            transform: scale(1.3) translateY(-1rem);
+            outline: .5rem solid $primary-color;
+            z-index: 10;
+        }
+    }
+    &:hover &_photo:not(:hover){    // When we want hover effect on other items other than the hocered item
+        transform: scale(.9);       // done as when parent is hovered and the children which are not hovered
+    }
+}

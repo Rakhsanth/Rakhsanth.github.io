@@ -1,0 +1,150 @@
+.card{
+    height: 42rem;
+    perspective: 150rem; // The perspective of child need to be given to the parent. here it is given for rotation
+    position: relative;
+    @include respond(tab-port){
+        height: 60rem;
+    }
+
+    .card-side{
+        height: 42rem;
+        transition: all .8s ease;
+        backface-visibility: hidden;    // so that the backside of rotated shit is not visible
+        width: 100%;    
+        position: absolute;
+        top: 0;
+        left: 0;
+        // color: $color-white;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($shadow-color, .2);
+        overflow: hidden;
+        @include respond(tab-port){
+            height: 60rem;
+        }
+
+        &-front{
+            background-color: $color-white;
+        }
+        &-back{
+            transform: rotateY(180deg);
+
+            &-1{
+                background-image: linear-gradient(to right bottom, $secondary-color-light, $secondary-color-dark);
+            }
+            &-2{
+                background-image: linear-gradient(to right bottom, $primary-color, $primary-color-light);
+            }
+            &-3{
+                background-image: linear-gradient(to right bottom, $tertiary-color-light, $tertiary-color-dark);
+            }
+
+            @include respond(tab-port){
+                top: 45rem;
+                height: 20rem;
+                transform: none;
+                clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+            }
+        }
+    }
+    &:hover .card-side-front{
+        transform: rotateY(-180deg);
+        @include respond(tab-port){
+            transform: none;
+        }
+    }
+    &:hover .card-side-back{
+        transform: rotateY(0deg);
+        @include respond(tab-port){
+            transform: none;
+        }
+    }
+
+    &-picture{
+        height: 20rem;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        background-blend-mode: screen;
+
+        &-1{
+            background-image: linear-gradient(to right bottom, $secondary-color-light, $secondary-color-dark),
+            url(../img/falls.jpg);
+        }
+        &-2{
+            background-image: linear-gradient(to right bottom, $primary-color, $primary-color-light),
+            url(../img/falls.jpg);
+        }
+        &-3{
+            background-image: linear-gradient(to right bottom, $tertiary-color-light, $tertiary-color-dark),
+            url(../img/falls.jpg);
+        }
+    }
+
+    &-heading{
+        text-transform: uppercase;
+        position: absolute;
+        text-align: right;
+        top: 12rem;
+        right: 1.5rem;
+        width: 75%;
+        color: $color-white;
+
+        &-break{
+            padding: 1rem;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+
+            &-1{
+                background-image: linear-gradient(to right bottom,
+                rgba($secondary-color-light, .85),
+                rgba($secondary-color-dark, .85));
+            }
+            &-2{
+                background-image: linear-gradient(to right bottom,
+                rgba( $primary-color, .85),
+                rgba( $primary-color-light, .85));
+            }
+            &-3{
+                background-image: linear-gradient(to right bottom,
+                rgba($tertiary-color-light, .85),
+                rgba($tertiary-color-dark, .85));
+            }
+        }
+    }
+
+    &-details{
+        padding: 1rem;
+
+        &-list{
+            list-style: none;
+            li{
+                width: 80%;
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+                margin: 0 auto;
+
+                &:not(:last-child){
+                    border-bottom: 1px solid $color-light-grey;
+                }
+            }
+        }
+    }
+
+    &-booking{
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        transform: translate(-50%, -50%);
+        color: $color-white;
+
+        &-only{
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
+        &-price{
+            font-size: 6rem;
+        }
+    }
+}

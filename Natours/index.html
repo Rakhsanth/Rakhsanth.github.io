@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- The above line is given by VS code itself and it is mandatory to give our page a width of device width -->
+        <link rel="stylesheet"
+        href=https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"/>
+        <!-- <link rel="stylesheet" href="css/icons.css"> -->
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Tours | Our Itenerary in our experiences</title>
+    </head>
+    <body>
+        <div class="navigation">
+            <input
+                type="checkbox"
+                class="navigation-checkbox"
+                id="nav-toggle"
+            />
+            <label for="nav-toggle" class="navigation-button">
+                <span class="navigation-button-icon"></span>
+            </label>
+            <div class="navigation-background">&nbsp;</div>
+
+            <nav class="navigation-container">
+                <ul class="navigation-container-list">
+                    <li class="navigation-container-list-item">
+                        <a
+                            href="#about-section"
+                            class="navigation-container-list-item-link"
+                            onclick="handleNavClick(event)"
+                            >About</a
+                        >
+                    </li>
+                    <li class="navigation-container-list-item">
+                        <a
+                            href="#features-section"
+                            class="navigation-container-list-item-link"
+                            onclick="handleNavClick(event)"
+                            >Features</a
+                        >
+                    </li>
+                    <li class="navigation-container-list-item">
+                        <a
+                            href="#tour-section"
+                            class="navigation-container-list-item-link"
+                            onclick="handleNavClick(event)"
+                            >Recommended</a
+                        >
+                    </li>
+                    <li class="navigation-container-list-item">
+                        <a
+                            href="#posts-section"
+                            class="navigation-container-list-item-link"
+                            onclick="handleNavClick(event)"
+                            >Reviews</a
+                        >
+                    </li>
+                    <li class="navigation-container-list-item">
+                        <a
+                            href="#bookings-section"
+                            class="navigation-container-list-item-link"
+                            onclick="handleNavClick(event)"
+                            >Booking</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <header class="header">
+            <!-- Always write with the class name for best practice -->
+            <div class="image-box">
+                <img
+                    src="./img/logo.jpg"
+                    alt="back-packer-logo"
+                    class="logo-image"
+                />
+            </div>
+            <div class="header-text-box">
+                <h1 class="primary-heading">
+                    <span class="primary-heading-main">Budget BackPackers</span>
+                    <span class="primary-heading-secondary"
+                        >travelling is where heaven appears</span
+                    >
+                </h1>
+                <a href="#" class="btn btn-white btn-animated"
+                    >View our picks</a
+                >
+            </div>
+        </header>
+
+        <main>
+            <section class="about-section" id="about-section">
+                <div class="text-center-util heading-margin-util-big">
+                    <h2 class="secondary-heading">
+                        Exciting tours for wanderers !
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <h3 class="h3-heading heading-margin-util-small">
+                            You will fall in love with nature
+                        </h3>
+                        <p class="paragraph">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Delectus recusandae culpa exercitationem
+                            incidunt laborum aliquam architecto eum rerum quia
+                            beatae atque suscipit repellat nesciunt nulla,
+                            voluptatem consectetur quo eveniet vero.
+                        </p>
+                        <h3 class="h3-heading heading-margin-util-small">
+                            experience nature as you never been before
+                        </h3>
+                        <p class="paragraph">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Vitae voluptatum, numquam voluptatem eligendi.
+                        </p>
+                        <a href="#" class="btn-about">Learn more &rarr;</a>
+                    </div>
+                    <div class="col-1-of-2">
+                        <div class="composition">
+                            <img
+                                src="./img/falls.jpg"
+                                alt="falls"
+                                class="composition_photo composition_photo-1"
+                            />
+                            <img
+                                src="./img/trecking.jpg"
+                                alt="trecking"
+                                class="composition_photo composition_photo-2"
+                            />
+                            <img
+                                src="./img/wildlife.jpg"
+                                alt="wildlife"
+                                class="composition_photo composition_photo-3"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="features-section" id="features-section">
+                <div class="text-center-util heading-margin-util-big">
+                    <h2 class="secondary-heading-white">
+                        Features and benefits
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="col-1-of-4">
+                        <div class="feature-container text-center-util">
+                            <i class="icon-basic-world feature-icon"></i>
+                            <h3 class="h3-heading heading-margin-util-small">
+                                Explore the world
+                            </h3>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Vitae voluptatum, numquam
+                                voluptatem eligendi.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-1-of-4">
+                        <div class="feature-container text-center-util">
+                            <i class="icon-basic-compass feature-icon"></i>
+                            <h3 class="h3-heading heading-margin-util-small">
+                                Meet nature
+                            </h3>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Vitae voluptatum, numquam
+                                voluptatem eligendi.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-1-of-4">
+                        <div class="feature-container text-center-util">
+                            <i class="icon-basic-map feature-icon"></i>
+                            <h3 class="h3-heading heading-margin-util-small">
+                                Find your way
+                            </h3>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Vitae voluptatum, numquam
+                                voluptatem eligendi.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-1-of-4">
+                        <div class="feature-container text-center-util">
+                            <i class="icon-basic-heart feature-icon"></i>
+                            <h3 class="h3-heading heading-margin-util-small">
+                                Live a healthy life
+                            </h3>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Vitae voluptatum, numquam
+                                voluptatem eligendi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tour-section" id="tour-section">
+                <div class="text-center-util">
+                    <h3 class="secondary-heading heading-margin-util-big">
+                        Our most exsiting picks
+                    </h3>
+                </div>
+                <div class="row">
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <div class="card-side card-side-front">
+                                <div class="card-picture card-picture-1">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card-heading">
+                                    <span
+                                        class="card-heading-break card-heading-break-1"
+                                        >Beach surfers</span
+                                    >
+                                </h4>
+                                <div class="card-details">
+                                    <ul class="card-details-list">
+                                        <li>3 days trip</li>
+                                        <li>Anytime online guide</li>
+                                        <li>
+                                            Stay at cheap and luxurious hotel
+                                        </li>
+                                        <li>Difficulty - easy</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div
+                                class="card-side card-side-back card-side-back-1"
+                            >
+                                <div class="card-booking">
+                                    <p class="card-booking-only">only</p>
+                                    <p class="card-booking-price">
+                                        &#x20b9; 120
+                                    </p>
+                                    <a href="#popup-modal" class="btn btn-white"
+                                        >Book Now</a
+                                    >
+                                    <!-- used the target css attribute for the functionality -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <div class="card-side card-side-front">
+                                <div class="card-picture card-picture-2">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card-heading">
+                                    <span
+                                        class="card-heading-break card-heading-break-2"
+                                        >Hard treckers</span
+                                    >
+                                </h4>
+                                <div class="card-details">
+                                    <ul class="card-details-list">
+                                        <li>3 days trip</li>
+                                        <li>Anytime online guide</li>
+                                        <li>
+                                            Stay at cheap and luxurious hotel
+                                        </li>
+                                        <li>Difficulty - easy</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div
+                                class="card-side card-side-back card-side-back-2"
+                            >
+                                <div class="card-booking">
+                                    <p class="card-booking-only">only</p>
+                                    <p class="card-booking-price">
+                                        &#x20b9; 120
+                                    </p>
+                                    <a href="#popup-modal" class="btn btn-white"
+                                        >Book Now</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <div class="card-side card-side-front">
+                                <div class="card-picture card-picture-3">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card-heading">
+                                    <span
+                                        class="card-heading-break card-heading-break-3"
+                                        >Snow surfers</span
+                                    >
+                                </h4>
+                                <div class="card-details">
+                                    <ul class="card-details-list">
+                                        <li>3 days trip</li>
+                                        <li>Anytime online guide</li>
+                                        <li>
+                                            Stay at cheap and luxurious hotel
+                                        </li>
+                                        <li>Difficulty - easy</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div
+                                class="card-side card-side-back card-side-back-3"
+                            >
+                                <div class="card-booking">
+                                    <p class="card-booking-only">only</p>
+                                    <p class="card-booking-price">
+                                        &#x20b9; 120
+                                    </p>
+                                    <a href="#popup-modal" class="btn btn-white"
+                                        >Book Now</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popup-modal" id="popup-modal">
+                    <div class="popup-modal-content">
+                        <div class="popup-modal-content-left">
+                            <img
+                                src="img/trecking.jpg"
+                                alt="back packer"
+                                class="popup-modal-content-left-img"
+                            />
+                            <img
+                                src="img/falls.jpg"
+                                alt="back packer"
+                                class="popup-modal-content-left-img"
+                            />
+                        </div>
+                        <div class="popup-modal-content-right">
+                            <h4
+                                class="secondary-heading h3-heading heading-margin-util-small"
+                            >
+                                Important things to know before planning the
+                                trip
+                            </h4>
+                            <p class="popup-modal-content-right-text">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quidem, unde. Fugiat quidem
+                                sunt dolore sequi quo, consectetur dolorum
+                                dignissimos facere quibusdam minus iusto?
+                                Excepturi saepe facere reiciendis eveniet,
+                                veniam ullam? Lorem, ipsum dolor sit amet
+                                consectetur adipisicing elit. Incidunt, dolorem
+                                corrupti aut itaque libero cupiditate. Cum
+                                temporibus excepturi ipsum ea, quisquam, labore
+                                quasi accusantium suscipit reiciendis in
+                                accusamus soluta.
+                            </p>
+                            <a href="#" class="btn btn-green btn-small"
+                                >Book now</a
+                            >
+                        </div>
+                        <a
+                            href="#tour-section"
+                            class="popup-modal-content-close"
+                            >&times;</a
+                        >
+                    </div>
+                </div>
+            </section>
+            <section class="posts-section">
+                <video class="bg-video" autoplay muted loop>
+                    <source src="img/bg-video.webm" type="video/webm" />
+                </video>
+                <div class="text-center-util">
+                    <h3 class="secondary-heading heading-margin-util-big">
+                        What people tell about our plan
+                    </h3>
+                </div>
+                <div class="row">
+                    <div class="post-container">
+                        <figure class="post-picture">
+                            <img
+                                src="img/wildlife.jpg"
+                                alt="user"
+                                class="post-picture-cropped"
+                            />
+                            <figcaption class="image-text">Sharan</figcaption>
+                        </figure>
+                        <div class="post-text">
+                            <h3 class="h3-heading">
+                                That was great trip in my life
+                            </h3>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet consectetur,
+                                adipisicing elit. Sed nihil explicabo maiores
+                                sint blanditiis esse? Sequi adipisci recusandae
+                                autem fuga. Fugit corrupti laborum officia
+                                asperiores nulla similique vitae doloribus
+                                dolore. Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Inventore excepturi ex dolorum
+                                beatae exercitationem magnam cumque quos fugit
+                                necessitatibus, harum eius neque quaerat
+                                corporis nam reiciendis quis maxime dolorem
+                                rerum!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="post-container">
+                        <figure class="post-picture">
+                            <img
+                                src="img/trecking.jpg"
+                                alt="user"
+                                class="post-picture-cropped"
+                            />
+                            <figcaption class="image-text">Rakhy</figcaption>
+                        </figure>
+                        <div class="post-text">
+                            <h3 class="h3-heading">
+                                That was an unforgettable moment
+                            </h3>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Inventore excepturi ex dolorum
+                                beatae exercitationem magnam cumque quos fugit
+                                necessitatibus, harum eius neque quaerat
+                                corporis nam reiciendis quis maxime dolorem
+                                rerum!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center-util">
+                    <a href="#" class="btn-about">View more reviews &rarr;</a>
+                </div>
+            </section>
+
+            <section class="bookings-section" id="bookings-section">
+                <div class="booking-bg">
+                    <form action="#" class="form">
+                        <div class="heading-margin-util-small">
+                            <h2 class="secondary-heading">Start now !</h2>
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                class="text-input"
+                                id="name"
+                                placeholder="Full name"
+                                required
+                            />
+                            <label for="name" class="label label-text"
+                                >Fullname</label
+                            >
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="email"
+                                class="text-input"
+                                id="email"
+                                placeholder="xyz@abc.com"
+                                required
+                            />
+                            <label for="email" class="label label-text"
+                                >Email ID</label
+                            >
+                        </div>
+                        <div class="form-group radio-group">
+                            <input
+                                type="radio"
+                                class="radio-input"
+                                id="small-group"
+                                name="gruop-size"
+                            />
+                            <label for="small-group" class="label label-radio">
+                                <span class="radio-button"></span>
+                                Small group
+                            </label>
+                        </div>
+                        <div class="form-group radio-group">
+                            <input
+                                type="radio"
+                                class="radio-input"
+                                id="large-group"
+                                name="gruop-size"
+                                checked
+                            />
+                            <label for="large-group" class="label label-radio">
+                                <span class="radio-button"></span>
+                                Large group
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn-green btn">Book &rarr;</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer" id="footer">
+            <div class="footer-logo-box">
+                <div class="footer-logo"></div>
+            </div>
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="footer-navigation">
+                        <ul class="footer-list">
+                            <li class="footer-list-item">
+                                <a href="#" class="footer-list-item-link"
+                                    >Company</a
+                                >
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="#" class="footer-list-item-link"
+                                    >Contact</a
+                                >
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="#" class="footer-list-item-link"
+                                    >Career</a
+                                >
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="#" class="footer-list-item-link"
+                                    >Privacy policy</a
+                                >
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="#" class="footer-list-item-link"
+                                    >Terms</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <div class="copyright">
+                        <p class="copyright-text">
+                            Built by
+                            <span class="text-bold text-bold-white"
+                                >Rakhsanth</span
+                            >
+                            to test pure CSS knowledge. Design is inspired by
+                            <span class="text-bold text-bold-white"
+                                >Jonas Schemedtmann</span
+                            >. Copyright
+                            <span class="text-bold text-bold-white"
+                                >&copy;</span
+                            >
+                            by
+                            <span class="text-bold text-bold-white"
+                                >Rakhsanth</span
+                            >. Built in the motive to attach as part of my
+                            portfolio list of projects.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+    <script>
+        const handleNavClick = (event) => {
+            document.getElementById('nav-toggle').checked = false;
+        };
+    </script>
+</html>

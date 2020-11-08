@@ -1,0 +1,40 @@
+.header{
+    position: relative;
+    height: 95vh; /* This is line 95% of the current view port */
+    /* background-image: url(../img/hero.jpg); simple image. whenever we use gradient we need to use backgound
+        image property. If we need image then we can give in second param or else only gradient is also possible */
+    background-image: linear-gradient(to right bottom, 
+                    rgba($primary-color, 0.801), /* Here we have 2 images 1 is gradient another is our image */
+                    rgba($primary-color-light, 0.801)), /*The overlapping occurs from right to left(like url image in right is*/
+                    url(../img/hero.jpg);          /* overlapped by gradient in left) */                  
+    background-size: cover; /* This makes the image to cover its width to the current parent width */
+    background-position: top; /* which part does not need to be cropped */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    @include respond(tab-land){
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+    @include respond(mobile){
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+}
+
+.image-box{
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    height: 34px;
+}
+
+.logo-image{
+    height: 34px;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    &:hover{
+        animation: zoom 0.2s ease-out;
+        backface-visibility: hidden;
+    }
+}

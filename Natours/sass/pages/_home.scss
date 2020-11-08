@@ -1,0 +1,79 @@
+.header-text-box{
+    position: absolute; /* this starts from 0,0 of the 1st parent which has relative -> look at line 17 */
+    top: 45%;           /* This things set the element to center of ots parent */
+    left: 50%;
+    transform: translate(-50%, -50%); /* this is used to still center the things based on the contents level */
+    text-align: center;
+}
+
+.about-section{
+    background-color: $color-light-grey-about;
+    padding: 17rem 0;
+    margin-top: -20vh;
+
+    @include respond(tab-land){
+        padding-top: 30rem;
+    }
+    @include respond(mobile){
+        padding-top: 25rem;
+    }
+}
+
+.features-section{
+    margin-top: -10rem;
+    background-image: linear-gradient(to right, rgba($primary-color, 0.801), rgba($primary-color-light, 0.801)),
+                    url(../../img/features.jpg);
+    background-size: cover;
+    padding: 15rem 0;
+    transform: skewY(-7deg);  //Now skewed the parent but if we dont want its children to be skewed
+
+    & > *{    // &* would have selected all the children. >* means direct child only.
+        transform: skewY(7deg);     // As parent is skewed. We skew immediate child to opposite direction
+    }
+
+}
+
+.tour-section{
+    margin-top: -10rem;
+    background-color: $color-light-grey-about;
+    padding: 20rem 0;
+}
+
+.posts-section{
+    position: relative;
+    padding: 10rem 0;
+}
+
+.bookings-section{
+    padding: 20rem 0;
+    background-image: linear-gradient(to right bottom, rgba($primary-color-light, .8),
+                    rgba($primary-color, .8));
+    width: 100%;
+
+    .booking-bg{
+        background-image: linear-gradient(105deg, rgba($color-white, .7) 0%,
+                                        rgba($color-white, .7) 50%,
+                                        transparent 50%,),
+                        url(../img/booking-bg.jpg);
+        width: 75%;
+        margin: 0 auto;
+        background-size: cover;
+
+        @include respond(tab-land){
+            background-image: linear-gradient(105deg, rgba($color-white, .7) 0%,
+                                        rgba($color-white, .7) 65%,
+                                        transparent 65%),
+                        url(../img/booking-bg.jpg);
+        }
+        @include respond(mobile){
+            background-image: linear-gradient(105deg, rgba($color-white, .7) 0%,
+                                        rgba($color-white, .7) 75%,
+                                        transparent 75%),
+                        url(../img/booking-bg.jpg);
+        }
+        @include respond(mobile){
+            background-image: linear-gradient(to right, rgba($color-white, .8), rgba($color-white, .3)),
+                        url(../img/booking-bg.jpg);
+        }
+    }
+}

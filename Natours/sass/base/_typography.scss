@@ -1,0 +1,86 @@
+body{
+    font-family: "Lato"; /* added from google font api in the html link stylesheet */
+    font-weight: 400;
+    font-size: 16px; /* These are done to generalize the fonts and other stuffs in our page */
+    line-height: 1.7; /* This says like 1.7 times the normal line height */
+    color: $color-dark-grey; /* These things are inherited to child elements */
+}
+
+.primary-heading{
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+
+    &-main{
+        display: block;
+        font-weight: 400;
+        font-size: 4rem;
+        letter-spacing: 1rem;
+        animation: moveInLeft 1s ease-out;
+
+        @include respond(tab-port){
+            font-size: 3rem;
+            letter-spacing: .7rem;
+        }
+    }
+    
+    &-secondary{
+        display: block;
+        font-weight: 400;
+        font-size: 2rem;
+        letter-spacing: .76rem;
+        animation: moveInRight 1s ease-out; /* This is where we call the animation */
+                            /* The properties are animation name, duration, ease, delay and iterations */
+        @include respond(tab-port){
+            font-size: 1.7rem;
+            letter-spacing: .5rem;
+        }
+    }
+}
+
+.secondary-heading{     // this is to give the nice coloring of gradient to the letters
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: linear-gradient(to right, $primary-color, $primary-color-light);  //give the gradient
+    display: inline-block;
+    -webkit-background-clip: text;  // clip the gradient using text
+    color: transparent;     // make text color transparent
+    transition: all .2s;
+    
+    @include respond(tab-port){
+        font-size: 2.7rem;
+    }
+
+    &-white{
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: inline-block;
+        color: $color-white;
+
+        &:hover{
+            transform: skew(15deg, 2deg) scale(1.1);
+            text-shadow: .5rem 1rem 2rem rgba($shadow-color, .2);
+        }
+    }
+
+    &:hover{
+        transform: skew(15deg, 2deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($shadow-color, .2);
+    }
+}
+
+.h3-heading{
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;;
+}
+
+.paragraph{
+    font-size: $default-font-size;
+    
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+}

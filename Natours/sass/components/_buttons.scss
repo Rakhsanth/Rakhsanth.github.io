@@ -1,0 +1,88 @@
+.btn{
+    /* Visited state is picked as we want the button to appear same even after visited */
+    &, &:link, &:visited{ /* pseudo classes as we can use this btn for many kind of elements, now we are picking the one with link */
+        padding: 1rem 4rem;
+        font-size: $default-font-size;
+        display: inline-block; /* This is done to make it non overlapping when padding and all is given to some element */
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 100px;
+        position: relative;
+        cursor: pointer;
+        border: none;
+        transition: all .2s; /* this is used to animate the hover and all pseudo parts(when given all) */
+        backface-visibility: 4;
+    }
+
+    &-green{
+        background-color: $primary-color;
+        color: $color-white;
+        &::after{
+            background-color: $primary-color;
+        }
+    }
+
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.205); /* x, y, blur(to appear some depth), color and opacity */
+        &::after{
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    &:active{
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.205);
+        outline: none;
+    }
+    &:focus{
+        outline: none;
+    }
+
+    &-white{
+        background-color: $color-white;
+        color: $color-dark-grey;
+        &::after{
+            background-color: white;
+        }
+    }
+    &::after{
+    /* Represents a styleable child pseudo-element immediately after the originating element’s actual content. */
+        content: "";            /* mandatory for this after to appear on the browser */
+        display: inline-block;  /* mandatory for this after to appear on the browser */
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 100px;
+        transition: all .4s;
+        z-index: -1;
+    }
+    &-animated{
+        animation: headerBtnMoveUp .6s ease-out .75s;
+        animation-fill-mode: backwards;     /* This makes the 0% of the keyframes before the animation start's */
+    }
+}
+
+.btn-about{
+    &:link, &:visited{
+        font-size: $default-font-size;
+        text-decoration: none;
+        display: inline-block;
+        color: $primary-color;
+        border-bottom: 2px solid $primary-color;
+        padding: 3px; 
+    }
+    &:hover{
+        color: $color-white;
+        background-color: $primary-color;
+        box-shadow: 0 1rem 2rem rgba($shadow-color, .2);
+        transform: translateY(-2px);
+    }
+    &:active, &:focus{
+        box-shadow: 0 .5rem 1rem rgba($shadow-color, .2);
+        transform: translateY(0);
+        outline: none;
+    }
+}

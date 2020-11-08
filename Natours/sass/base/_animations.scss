@@ -1,0 +1,48 @@
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translate(-100px, 0);
+    }
+    75%{
+        transform: translate(10px, 0);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight{ /* these are used for animations we can animate any css property like height opacity */
+    0%{
+        opacity: 0;
+        transform: translate(100px, 0);
+    }
+    75%{
+        transform: translate(-10px, 0);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes zoom{
+    0%{
+        height: 35px;
+    }
+    100%{
+        height: 70px;
+        transform: translate(-25%, -25%);
+    }
+}
+
+@keyframes headerBtnMoveUp{
+    0%{
+        transform: translateY(70px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

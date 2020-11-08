@@ -1,0 +1,63 @@
+.footer{
+    text-align: center;
+    background-color: $color-dark-grey;
+    padding: 10rem 0;
+    font-size: 1.4rem;
+
+    &-logo-box{
+        height: 10rem;
+        width: 10rem;
+        display: inline-block;
+        background-image: linear-gradient(to right, rgba($primary-color, .8), rgba($primary-color-light, .8)), 
+                        url(../img/logo.jpg);
+        background-size: cover;
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        margin-bottom: 5rem;
+    }
+    &-logo{
+        
+    }
+
+    &-navigation{
+        border-top: 1px solid $shadow-color;
+        display: inline-block;
+        @include respond(tab-port){
+            width: 100%;
+        }  
+    }
+    &-list{
+        list-style: none;
+    }
+    &-list-item{
+        display: inline-block;
+        padding: .5rem;
+        @include respond(tab-port){
+            padding: .7rem;
+        } 
+
+        &-link:link, &-link:visited{
+            color: $color-white;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;  // was not able to transform without inline-block
+        }
+        &-link:hover, &-link:active{
+            color: $primary-color;
+            text-shadow: 0 1.5rem 2rem $shadow-color;
+            transform: rotate(5deg) scale(1.1);
+        }
+    }
+
+    .copyright{
+        color: $color-light-grey;
+        @include respond(tab-port){
+            width: 100%;
+        }  
+        &-text{
+            width: 85%;
+            border-top: 1px solid $shadow-color;
+            display: inline-block;
+        }
+    }
+}
